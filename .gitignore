@@ -1,0 +1,44 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V8
+.Trashes
+
+# ── Sensitive / Credentials ──────────────────────────────────────────────────
+# GitHub Copilot: OAuth tokens, session data, chat history, databases
+github-copilot/
+
+# qBittorrent: may contain VPN/network interface config and session data
+qBittorrent/
+
+# Spicetify: may contain Spotify account/session references
+spicetify/
+
+# ── Sensitive / Logs / Outputs ───────────────────────────────────────────────
+# Mole: logs and reports expose installed apps, Downloads history, Chrome profiles
+mole/
+
+# ── Unimportant / Bulky ──────────────────────────────────────────────────────
+# Raycast: 351 MB of compiled extensions, binaries, and assets
+raycast/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files
+*.log
+
+# Lock files
+*.lck
+
+# Build/cache artifacts
+*.map
+*.cache
+__pycache__/
+*.pyc
+
+# Empty directories (menus)
+menus/
