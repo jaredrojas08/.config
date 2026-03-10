@@ -8,3 +8,10 @@ theme = TokyoNight Night
 
 window-width = 96
 window-height = 23
+
+font-thicken = true
+font-thicken-strength = 255
+
+adjust-cursor-thickness = 5
+
+keybind = cmd+shift+~=reload_config
