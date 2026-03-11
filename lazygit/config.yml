@@ -1,4 +1,22 @@
 gui:
+  # Put your github name instead if you want to use this
+  authorColors:
+    'jaredrojas08': 'blue'
+    '*': 'red'
+  branchColorPatterns:
+    'jared': 'blue'
+
+  sidePanelWidth: 0.40
+  expandFocusedSidePanel: true 
+
   theme:
     activeBorderColor:
       - red
+      - bold
+
+  # 2 or 3 when I get my NerdFonts working
+  nerdFontsVersion: ""
+
+  commitHashLength: 0
+
+  showDivergenceFromBaseBranch: 'arrowAndNumber'
