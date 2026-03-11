@@ -8,8 +8,7 @@ font-size = 18
 
 theme = TokyoNight Night
 
-window-width = 123
-window-height = 29
+fullscreen = true
 
 font-thicken = true
 font-thicken-strength = 255
