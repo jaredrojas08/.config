@@ -1,0 +1,9 @@
+[c]
+symbol = " "
+
+[cpp]
+disabled = false
+symbol = " "
+
+[scala]
+detect_folders = [] 
