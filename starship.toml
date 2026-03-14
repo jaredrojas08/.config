@@ -43,6 +43,9 @@ symbol = " "
 [kotlin]
 symbol = " "
 
+[lua]
+symbol = " "
+
 [nodejs]
 symbol = " "
 
