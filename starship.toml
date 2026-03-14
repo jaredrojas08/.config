@@ -53,7 +53,7 @@ symbol = " "
 symbol = " "
 
 [os]
-disabled = false
+disabled = true
 
 [os.symbols]
 Macos = " "
