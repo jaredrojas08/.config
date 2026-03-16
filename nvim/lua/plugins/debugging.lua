@@ -3,48 +3,48 @@ return {
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
-    "leoluz/nvim-dap-go"
+		"leoluz/nvim-dap-go",
 	},
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
 
-    require("dap-go").setup()
-    require("dapui").setup()
+		require("dap-go").setup()
+		require("dapui").setup()
 
-    dap.adapters.codelldb = {
-      type = "executable",
-      command = vim.fn.stdpath("data") .. "/mason/bin/codelldb",
-    }
-    dap.configurations.cpp = {
-      {
-        name = "Launch file",
-        type = "codelldb",
-        request = "launch",
-        program = function()
-          return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-        end,
-        cwd = "${workspaceFolder}",
-        stopOnEntry = false,
-      },
-    }
-    dap.configurations.c = dap.configurations.cpp
+		dap.adapters.codelldb = {
+			type = "executable",
+			command = vim.fn.stdpath("data") .. "/mason/bin/codelldb",
+		}
+		dap.configurations.cpp = {
+			{
+				name = "Launch file",
+				type = "codelldb",
+				request = "launch",
+				program = function()
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+				end,
+				cwd = "${workspaceFolder}",
+				stopOnEntry = false,
+			},
+		}
+		dap.configurations.c = dap.configurations.cpp
 
-    dap.adapters.coreclr = {
-      type = "executable",
-      command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
-      args = { "--interpreter=vscode" },
-    }
-    dap.configurations.cs = {
-      {
-        type = "coreclr",
-        name = "launch - netcoredbg",
-        request = "launch",
-        program = function()
-          return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/", "file")
-        end,
-      },
-    }
+		dap.adapters.coreclr = {
+			type = "executable",
+			command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
+			args = { "--interpreter=vscode" },
+		}
+		dap.configurations.cs = {
+			{
+				type = "coreclr",
+				name = "launch - netcoredbg",
+				request = "launch",
+				program = function()
+					return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/", "file")
+				end,
+			},
+		}
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
