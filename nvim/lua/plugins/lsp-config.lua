@@ -14,7 +14,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright", "omnisharp", "clangd", "ocamllsp", "asm-lsp" },
+				ensure_installed = { "lua_ls", "pyright", "omnisharp", "clangd", "ocamllsp", "asm-lsp", "jdtls", "ts_ls", "html", "cssls", "marksman", "taplo" },
 			})
 		end,
 	},
@@ -23,7 +23,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			vim.lsp.config("*", { capabilities = capabilities })
-			vim.lsp.enable("lua_ls", "pyright", "omnisharp", "clangd", "ocamllsp", "asm-lsp")
+			vim.lsp.enable("lua_ls", "pyright", "omnisharp", "clangd", "ocamllsp", "asm-lsp", "jdtls", "ts_ls", "sourcekit", "html", "cssls", "marksman", "taplo")
 
 			vim.diagnostic.config({
 				virtual_text = true,
@@ -42,7 +42,7 @@ return {
 		{
 			"scalameta/nvim-metals",
 			dependencies = { "nvim-lua/plenary.nvim", "hrsh7th/cmp-nvim-lsp" },
-			ft = { "scala", "sbt", "java" },
+			ft = { "scala", "sbt" },
 			opts = function()
 				local metals_config = require("metals").bare_config()
 				metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -55,7 +55,7 @@ return {
 			config = function(self, metals_config)
 				local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
 				vim.api.nvim_create_autocmd("FileType", {
-					pattern = self.ft,
+					pattern = { "scala", "sbt" },
 					callback = function()
 						require("metals").initialize_or_attach(metals_config)
 					end,
