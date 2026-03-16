@@ -1,3 +1,7 @@
 # Welcome to my Configurations!
 
-These are some of my configurations ranging from my command line prompts to eventually my neovim configurations (When I get that working haha). I regularly update my configurations as I am just starting but feel free to be inspired by what I have. Have a good day!
+These are my confiigurations for everything I use terminal wise. This includes my customizable command prompt (starship) and lazygit for easy git uses.
+I also have my NeoVim configuration on here. Use/be inspired by my configurations!
+
+## Credit
+Shout outs to typecraft on YouTube for making an easy to understand tutorial on setting up NeoVim
