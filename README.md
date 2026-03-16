@@ -5,3 +5,5 @@ I also have my NeoVim configuration on here. Use/be inspired by my configuration
 
 ## Credit
 Shout outs to typecraft on YouTube for making an easy to understand tutorial on setting up NeoVim
+
+In my Stars on GitHub I also have a list for all the NeoVim plugins I used in my setup
