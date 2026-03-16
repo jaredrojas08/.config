@@ -31,26 +31,26 @@ return {
 		dap.configurations.c = dap.configurations.cpp
 
 		dap.adapters.ocamlearlybird = {
-		type = "executable",
-		command = "ocamlearlybird",
-		args = { "debug" },
-	}
-	dap.configurations.ocaml = {
-		{
-			name = "OCaml Debug main.bc",
-			type = "ocamlearlybird",
-			request = "launch",
-			program = "${workspaceFolder}/_build/default/bin/main.bc",
-		},
-		{
-			name = "OCaml Debug test.bc",
-			type = "ocamlearlybird",
-			request = "launch",
-			program = "${workspaceFolder}/_build/default/test/test.bc",
-		},
-	}
+			type = "executable",
+			command = "ocamlearlybird",
+			args = { "debug" },
+		}
+		dap.configurations.ocaml = {
+			{
+				name = "OCaml Debug main.bc",
+				type = "ocamlearlybird",
+				request = "launch",
+				program = "${workspaceFolder}/_build/default/bin/main.bc",
+			},
+			{
+				name = "OCaml Debug test.bc",
+				type = "ocamlearlybird",
+				request = "launch",
+				program = "${workspaceFolder}/_build/default/test/test.bc",
+			},
+		}
 
-	dap.adapters.coreclr = {
+		dap.adapters.coreclr = {
 			type = "executable",
 			command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
 			args = { "--interpreter=vscode" },

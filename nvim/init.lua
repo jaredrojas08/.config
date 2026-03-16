@@ -14,6 +14,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.env.PATH = vim.env.HOME .. "/.cargo/bin:" .. vim.env.PATH
+
 require("vim-options")
 require("lazy").setup("plugins")
 
