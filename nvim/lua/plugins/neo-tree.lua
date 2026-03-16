@@ -8,6 +8,13 @@ return {
   },
   lazy = false, -- neo-tree will lazily load itself
   config = function()
+    require("neo-tree").setup({
+      filesystem = {
+        filtered_items = {
+          hide_by_pattern = { "*.meta" },
+        },
+      },
+    })
     vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
   end,
 }
