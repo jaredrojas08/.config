@@ -14,7 +14,7 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
-local themes = { "embark", "tokyonight", "oxocarbon" }
+local themes = { "embark", "tokyonight", "oxocarbon", "catppuccin" }
 local theme_file = vim.fn.stdpath("data") .. "/current_theme"
 local theme_index = 1
 
