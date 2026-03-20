@@ -14,7 +14,20 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright", "omnisharp", "clangd", "ocamllsp", "asm-lsp", "jdtls", "ts_ls", "html", "cssls", "marksman", "taplo" },
+				ensure_installed = {
+					"lua_ls",
+					"pyright",
+					"omnisharp",
+					"clangd",
+					"ocamllsp",
+					"asm_lsp",
+					"jdtls",
+					"ts_ls",
+					"html",
+					"cssls",
+					"marksman",
+					"taplo",
+				},
 			})
 		end,
 	},
@@ -23,7 +36,21 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			vim.lsp.config("*", { capabilities = capabilities })
-			vim.lsp.enable("lua_ls", "pyright", "omnisharp", "clangd", "ocamllsp", "asm-lsp", "jdtls", "ts_ls", "sourcekit", "html", "cssls", "marksman", "taplo")
+			vim.lsp.enable(
+				"lua_ls",
+				"pyright",
+				"omnisharp",
+				"clangd",
+				"ocamllsp",
+				"asm_lsp",
+				"jdtls",
+				"ts_ls",
+				"sourcekit",
+				"html",
+				"cssls",
+				"marksman",
+				"taplo"
+			)
 
 			vim.diagnostic.config({
 				virtual_text = true,
