@@ -1,0 +1,6 @@
+return {
+	"lewis6991/gitsigns.nvim",
+	opts = {
+		signs_staged_enable = true,
+	},
+}

@@ -6,6 +6,7 @@ vim.opt.smarttab = true
 vim.g.mapleader = " "
 
 vim.wo.relativenumber = true
+vim.opt.signcolumn = "yes"
 
 vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
@@ -14,7 +15,7 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
-local themes = { "embark", "tokyonight", "oxocarbon", "catppuccin" }
+local themes = { "embark", "tokyonight", "oxocarbon" }
 local theme_file = vim.fn.stdpath("data") .. "/current_theme"
 local theme_index = 1
 
