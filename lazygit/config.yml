@@ -11,25 +11,25 @@ gui:
 
   theme:
    activeBorderColor:
-     - '#63F2F1'
+     - '#7aa2f7'
    inactiveBorderColor:
-     - '#585273'
+     - '#565f89'
    optionsTextColor:
-     - '#D4BFFF'
+     - '#7dcfff'
    selectedLineBgColor:
-     - '#3E3859'
+     - '#283457'
    selectedRangeBgColor:
-     - '#2D2B40'
+     - '#2e3c64'
    cherryPickedCommitBgColor:
-     - '#585273'
+     - '#bb9af7'
    cherryPickedCommitFgColor:
-     - '#91DDFF'
+     - '#1a1b26'
    unstagedChangesColor:
-     - '#F48FB1'
+     - '#f7768e'
    defaultFgColor:
-     - '#CBE3E7'
+     - '#c0caf5'
    searchingActiveBorderColor:
-     - '#FFE6B3'
+     - '#e0af68'
 
   # 2 or 3 when I get my NerdFonts working
   nerdFontsVersion: ""

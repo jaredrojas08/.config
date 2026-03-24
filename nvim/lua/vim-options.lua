@@ -17,7 +17,7 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 vim.keymap.set("i", "jk", "<Esc>")
 
-local themes = { "embark", "tokyonight", "oxocarbon" }
+local themes = { "embark", "tokyonight-night", "oxocarbon" }
 local theme_file = vim.fn.stdpath("data") .. "/current_theme"
 local theme_index = 1
 
