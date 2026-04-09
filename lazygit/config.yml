@@ -37,3 +37,7 @@ gui:
   commitHashLength: 0
 
   showDivergenceFromBaseBranch: 'arrowAndNumber'
+
+git:
+  commit:
+    signOff: true
