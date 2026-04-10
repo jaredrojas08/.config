@@ -2,7 +2,14 @@ return {
     {
         "folke/noice.nvim",
         event = "VeryLazy",
-        opts = {},
+        opts = {
+            routes = {
+                {
+                    filter = { event = "msg_showmode" },
+                    view = "notify",
+                },
+            },
+        },
         dependencies = {
             "MunifTanjim/nui.nvim",
             "rcarriga/nvim-notify",
